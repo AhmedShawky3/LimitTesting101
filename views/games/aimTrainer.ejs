@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Basic 88</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/aimTrainer.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<!--[if lt IE 9]><script src="scripts/html5shiv.js"></script><![endif]-->
+</head>
+
+
+<body>
+  <%- include("../head") %>
+<!-- SCRIPTSSS-->
+<%- include("./functions/functions") %> 
+
+<!-- content -->
+<section class ="home-box main-box " >
+</section>
+  <div class="score1">  
+    <h1>score: <span id="score"></span></h1>
+  </div>
+  
+  <section class="container">
+
+    <div class="display">
+      <div id="min">00</div>
+      <div id="sec">00</div>
+      <div id="msec">00</div>
+    </div>
+  </section>
+  
+  <br>
+  <br>
+  
+  <div id = 'start' class= "home-start">
+    <h1>Aim Trainer<h1>
+      <img src="images/target.png" width="100" height="100" onclick="start1(),newImg(),startTime()">
+      <p>hit 20 targets as quickly as you can</p>
+      <p>click the target above to start </p>
+    </div>
+    <section id = 'field' class onclick="change()">
+    </section>
+
+  </div>
+  <div id = 'end' class= 'home-start' style="display: none;">
+    <h1>Avreage Time Per Target</h1>
+    <h1><span id = 'finalScore'></span></h1>
+    <button onclick="reset()">TryAgain</button>
+  </div>
+
+    
+<!-- Footer -->
+<%- include("../foot.ejs") %>
+</body>
+</html>
