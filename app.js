@@ -5,7 +5,8 @@ const routes = require('./routes/routes');
 const app = express();
 
 // listen for requests
-app.listen(3000);
+const port = process.env.PORT
+app.listen(port);
 
 // register view engine
 app.set('view engine', 'ejs');
